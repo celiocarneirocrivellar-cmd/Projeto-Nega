@@ -11,11 +11,11 @@ async function registerUser({ nome, email, senha }) {
 
     const hashedPassword = await bcrypt.hash(senha, 10);
 
-    const newUser = await userRepository.createUser({
+    const newUser = await userRepository.createUser(
         nome,
         email,
-        senha: hashedPassword
-    });
+        hashedPassword
+    );
 
     return newUser;
 }
