@@ -28,3 +28,6 @@ pool.connect()
     .then(() => console.log('Banco de dados conectado com sucesso!'))
     .catch((err) => console.error('Erro ao conectar no banco de dados:', err));
 
+const productRoutes = require("./src/routes/productRoutes");
+
+app.use("/api", productRoutes);
