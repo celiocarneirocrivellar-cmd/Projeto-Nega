@@ -1,11 +1,14 @@
+// model do produto 
 class Product {
-    construtor(id, nome, marca, preco, estoque) {
-        this.id = id;
-        this.nome = nome;
-        this.marca = marca;
-        this.preco = preco;
-        this.estoque = estoque;
-    };
-};
-
+  constructor(id, nome, descricao, preco, estoque, categoria, imagem) {
+    this.id = id;
+    this.nome = nome;
+    this.descricao = descricao;
+    this.preco = preco;
+    this.estoque = estoque;
+    this.categoria = categoria;
+    this.imagem = imagem;
+  }
+}
 module.exports = Product;
+
